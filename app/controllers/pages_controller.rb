@@ -1,12 +1,15 @@
 class PagesController < ApplicationController
 
-    def home #home is the action
+def index #home is the action
+end
 
-    end
+def about
+end
 
-    def about
+def engineer
+end
 
-    end
-
+def admin
+end
 
 end

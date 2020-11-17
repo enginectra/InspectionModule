@@ -5,4 +5,13 @@ Rails.application.routes.draw do
 
  root "pages#home" 
  get "/about", to: "pages#about"  #grab this route and send it to controller action
+  root 'pages#index'
+  get '/about', to: "pages#about"
+  get '/engineer', to: "pages#engineer"
+  get '/admin', to: "pages#admin"
+  get '/index', to: "pages#index"
+
+  
+
+
 end
