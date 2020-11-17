@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/engineer', to: "pages#engineer"
   get '/admin', to: "pages#admin"
   get '/index', to: "pages#index"
+  get '/signupc', to: "pages#signupc"
+  get '/signinc', to: "pages#signinc"
 
   
 
