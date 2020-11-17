@@ -19,4 +19,7 @@ end
 def singinc
 end
 
+def inspectionform
+end
+
 end
