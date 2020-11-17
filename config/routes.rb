@@ -7,8 +7,4 @@ Rails.application.routes.draw do
   get '/index', to: "pages#index"
   get '/signupc', to: "pages#signupc"
   get '/signinc', to: "pages#signinc"
-
-  
-
-
 end

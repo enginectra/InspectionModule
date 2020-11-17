@@ -17,6 +17,6 @@ def singupc
 end
 
 def singinc
+  
 end
-
 end
