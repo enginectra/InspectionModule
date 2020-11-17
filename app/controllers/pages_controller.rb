@@ -17,6 +17,7 @@ def singupc
 end
 
 def singinc
+  
 end
 
 def inspectionform
