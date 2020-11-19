@@ -18,20 +18,27 @@
 </div>
 </div>   %>
 
+
 <p>Sign In</p>
-<%= form_for @customer, :as => :customer, :url => signinc_path(@customer) do |f| %>
+<%= form_with model: @customer  do |form| %>
   <p>
-    <%= f.label 'email:' %><br />
-    <%= f.text_field :email %>
+  <%= form.label 'Email:' %><br/> 
+  <%= form.text_field :email, id: :email, id: :email, class: :email %>
   </p>
   <p>
-    <%= f.label 'password:' %><br />
-    <%= f.password_field :password %>
+  <%= form.label 'Password:' %><br/>
+  <%= form.password_field :password, id: :password, class: :password %>
   </p>
+
   <p>
-    <%= f.submit 'Sign In' %>&nbsp;&nbsp;&nbsp;
-    <%= f.submit 'Clear Form', :type => 'reset' %>
+    <%= form.submit 'Sign In' %>&nbsp;&nbsp;&nbsp;
+    <%= form.submit 'Clear Form', :type => 'reset' %>
   </p>
 <% end %>
+
+
+
+
+
 
 

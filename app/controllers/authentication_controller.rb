@@ -2,14 +2,11 @@ class AuthenticationController < ApplicationController
     def singupc
     end
     
-  
-
     def singine
     end
 
     def singupe
     end
-
 
     def singinc
         @customer = Customer.new
@@ -18,15 +15,15 @@ class AuthenticationController < ApplicationController
     def index
     end
       
-        def login
-          email = params[:customer][:email]
-          password = params[:customer][:password]
+    def login
+        email = params[:customer][:email]
+        password = params[:customer][:password]
       
-          if email.rindex('@')
-            email=email
-            customer = Customer.authenticate_by_email(email, password)
+        if email.rindex('@')
+          email=email
+          customer = Customer.authenticate_by_email(email, password)
           
-          end
+        end
       
           if customer
             flash[:notice] = 'Welcome.'
