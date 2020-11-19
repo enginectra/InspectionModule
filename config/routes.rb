@@ -5,9 +5,16 @@ Rails.application.routes.draw do
   get '/engineer', to: "pages#engineer"
   get '/admin', to: "pages#admin"
   get '/index', to: "pages#index"
-  get '/signupc', to: "pages#signupc"
-  get '/signinc', to: "pages#signinc"
+  get '/signupc', to: "authentication#signupc"
+  #sign in Customer
+  post "signinc" => "authentication#login"
+  get '/signinc', to: "authentication#signinc"
+  #signin Engineer
+  get '/signine', to: "authentication#signine"
+  get '/signupe', to: "authentication#signupe"
   get '/inspectionform', to: "pages#inspectionform"
+
+
 
 
 
