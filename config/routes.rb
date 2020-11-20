@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post "/inspectionform" => "authentication#create"
   get '/signinc', to: "authentication#signinc"
   get "/inspectionform" => "pages#inspectionform"
+  post '/sessions' => "sessions#create"
  
   
 

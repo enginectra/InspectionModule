@@ -1,6 +1,8 @@
-class Customer < ApplicationRecord
+class Customer < ActiveRecord::Base
+   
+  has_secure_password
 
-        attr_accessor :email, :password, :password_confirmation
+      attr_accessor :email, :password, :password_confirmation
         # attr_accessor :password
         before_save :encrypt_password
       
