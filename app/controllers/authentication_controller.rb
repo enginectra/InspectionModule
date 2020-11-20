@@ -8,33 +8,32 @@ class AuthenticationController < ApplicationController
     def singupe
     end
 
-    def singinc
-        @customer = Customer.new
-    end
+  
 
     def index
     end
-      
-    def login
-        email = params[:customer][:email]
-        password = params[:customer][:password]
-      
-        if email.rindex('@')
-          email=email
-          customer = Customer.authenticate_by_email(email, password)
-          
-        end
-      
-          if customer
-            flash[:notice] = 'Welcome.'
-            redirect_to :root
-          else
-            flash.now[:error] = 'Unknown user. Please check your email and password.'
-            render :action => "signinc"
-          end
-      
-        end
-      end
+
+    def inspectionform
+    end
+
+
+  def create
+    customer = Customer.new(customer_params) 
+    if customer.save
+      session[:customer_id] = customer.id 
+      redirect_to '/inspectionform'
+    else 
+      flash[:register_errors] = customer.errors.full_messages
+      redirect_to '/signupc'
+    end
+  end
+
+  private 
+  def customer_params
+    params.require(:customer).permit(:email, :password, :password_confirmation)
+  end
+
+end 
 
     
 
