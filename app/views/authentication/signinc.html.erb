@@ -1,37 +1,45 @@
 
- <%# <div class="container">
+ <div class="container">
     <div class="jumbotron">
       <h1>welcome to enginectra</h1>
       <h2>sign in as a customer</h2>
-<form>
+<form action = "/index" method= "POST">
+<input type="hidden" name= "authenticity_token" value="<%=form_authenticity_token %>">
   <div class="form-group">
-    <label for="exampleformcontrolinput1">email address</label>
-    <input type="email" class="form-control" id="custemail" placeholder="name@example.com">
+    <label for="email">email address</label>
+    <input type="email" class="form-control" id="email" name= "login[email]" placeholder="name@example.com">
   </div>
 
   <div class="form-group">
-    <label for="exampleformcontroltextarea1">password</label>
-    <textarea class="form-control" id="custpassword" rows="1"></textarea>
+    <label for="password">password</label>
+    <input class="form-control" id="password" name = "login[email]">
   </div>
-   <button type="submit" class="btn btn-primary" href = "inspectionform">submit</button>
+   <input type="submit" name= "submit" class="btn btn-primary submit">
 </form>
 </div>
-</div>   %>
+</div>   
+
 
 <p>Sign In</p>
-<%= form_for @customer, :as => :customer, :url => signinc_path(@customer) do |f| %>
+<%= form_with model: @customer  do |form| %>
   <p>
-    <%= f.label 'email:' %><br />
-    <%= f.text_field :email %>
+  <%= form.label 'Email:' %><br/> 
+  <%= form.text_field :email, id: :email, id: :email, class: :email %>
   </p>
   <p>
-    <%= f.label 'password:' %><br />
-    <%= f.password_field :password %>
+  <%= form.label 'Password:' %><br/>
+  <%= form.password_field :password, id: :password, class: :password %>
   </p>
+
   <p>
-    <%= f.submit 'Sign In' %>&nbsp;&nbsp;&nbsp;
-    <%= f.submit 'Clear Form', :type => 'reset' %>
+    <%= form.submit 'Sign In' %>&nbsp;&nbsp;&nbsp;
+    <%= form.submit 'Clear Form', :type => 'reset' %>
   </p>
 <% end %>
+
+
+
+
+
 
 

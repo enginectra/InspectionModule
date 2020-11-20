@@ -1,7 +1,7 @@
 class Customer < ApplicationRecord
 
-        attr_accessible :email, :password, :password_confirmation
-        attr_accessor :password
+        attr_accessor :email, :password, :password_confirmation
+        # attr_accessor :password
         before_save :encrypt_password
       
         validates_confirmation_of :password
