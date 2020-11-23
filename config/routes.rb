@@ -15,6 +15,15 @@ Rails.application.routes.draw do
   post "/inspectionform" => "authentication#create"
   get "/inspectionform" => "pages#inspectionform"
 
+
+  #sign in Engineer
+  # get '/signine', to: "authentication#signine"
+  # post '/sessions' => "sessions#createEngineer"
+  # delete '/sessions' => "sessions#destroy"
+   #sign up Engineer
+  post "/signine" => "engineer#create"
+  get "/signupe" => "engineer#signupe"
+
   # #signin Engineer
   # get '/signine', to: "authentication#signine"
   # get '/signupe', to: "authentication#signupe"

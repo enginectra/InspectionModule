@@ -2,11 +2,11 @@ class AuthenticationController < ApplicationController
     def singupc
     end
     
-    def singine
-    end
+    # def singine
+    # end
 
-    def singupe
-    end
+    # def singupe
+    # end
 
   
 
@@ -16,7 +16,7 @@ class AuthenticationController < ApplicationController
     def inspectionform
     end
 
-
+#Customer Create Function
   def create
     customer = Customer.new(customer_params) 
     if customer.save
@@ -32,6 +32,7 @@ class AuthenticationController < ApplicationController
   def customer_params
     params.require(:customer).permit(:email, :password, :password_confirmation)
   end
+
 
 end 
 
