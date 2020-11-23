@@ -6,13 +6,14 @@ Rails.application.routes.draw do
   get '/admin', to: "pages#admin"
   get '/index', to: "pages#index"
   get '/signupc', to: "authentication#signupc"
+
   #sign in Customer
-  post "/inspectionform" => "authentication#create"
   get '/signinc', to: "authentication#signinc"
-  get "/inspectionform" => "pages#inspectionform"
   post '/sessions' => "sessions#create"
- 
-  
+  delete '/sessions' => "sessions#destroy"
+   #sign up Customer
+  post "/inspectionform" => "authentication#create"
+  get "/inspectionform" => "pages#inspectionform"
 
   # #signin Engineer
   # get '/signine', to: "authentication#signine"
