@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201123183035) do
+ActiveRecord::Schema.define(version: 20201124202825) do
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.string "email"
@@ -27,6 +27,24 @@ ActiveRecord::Schema.define(version: 20201123183035) do
     t.string "mainSeal"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
+    t.string "EngineerID"
+    t.string "CustomerID"
+    t.string "Project_number"
+    t.string "Project_scope"
+    t.string "Elect_name"
+    t.string "Elect_email"
+    t.string "Elect_address"
+    t.string "Fire_protection_name"
+    t.string "Fire_protection_email"
+    t.string "Fire_protection_address"
+    t.string "Inspec_name"
+    t.string "Inspec_address"
+    t.string "Fp_representative"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
