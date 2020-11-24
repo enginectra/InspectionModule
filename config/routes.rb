@@ -20,13 +20,21 @@ Rails.application.routes.draw do
   # get '/signine', to: "authentication#signine"
   # post '/sessions' => "sessions#createEngineer"
   # delete '/sessions' => "sessions#destroy"
-   #sign up Engineer
-  post "/signine" => "engineer#create"
-  get "/signupe" => "engineer#signupe"
+  #sign in Engineer
+  # post '/sessions' => "sessionsengineer#create"
+  post '/sessionsengineer' => "sessionsengineer#create"
+  # post '/index', to: "sessionsengineer#index"
+  
+   #signup Engineer
+   get '/signupe', to: "engineer#signupe"
+   post '/signine' => "engineer#create"
+   get '/signine', to: "engineer#signine"
+
+
+  #  get "/signupe" => "pages#signupe"
 
   # #signin Engineer
-  # get '/signine', to: "authentication#signine"
-  # get '/signupe', to: "authentication#signupe"
+  
   # get '/inspectionform', to: "pages#inspectionform"
 
 

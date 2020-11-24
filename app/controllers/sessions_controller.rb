@@ -1,4 +1,5 @@
-class SessionsController < ActionController::Base
+class SessionsController < ApplicationController
+
     def create 
       customer = Customer.find_by(email: login_params[:email])
       if customer && customer.authenticate(login_params[:password])
@@ -11,7 +12,6 @@ class SessionsController < ActionController::Base
       end
     end
 
-
     private
       def login_params
           params.require(:login).permit(:email, :password)
@@ -22,4 +22,13 @@ class SessionsController < ActionController::Base
         flash[:session] = "You have logged out"
         redirect_to '/index'
     end
+
+
+    def index
+    end
+
+
+
+    
+
 end

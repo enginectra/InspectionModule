@@ -5,7 +5,7 @@ class EngineerController < ApplicationController
     def singine
     end
 
-    def singupe
+    def signupe
     end
 
   

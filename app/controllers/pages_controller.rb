@@ -16,8 +16,8 @@ end
 def singupc
 end
 
-def singupe
-end
+# def singupe
+# end
 
 def singinc
   
