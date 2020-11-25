@@ -4,8 +4,9 @@ class ProjectController < ApplicationController
     
 #Project Create Function
   def create
-    project = Project.new(project_params) 
-    if project.save
+
+    project = Project.new(project_params.merge({customerID: current_user.id}) 
+    rails if project.save
       
       session[:project_id] = project.id
 
