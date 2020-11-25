@@ -15,6 +15,21 @@ Rails.application.routes.draw do
   post "/inspectionform" => "authentication#create"
   get "/inspectionform" => "pages#inspectionform"
 
+  #Customer Dashboard & Checklist
+  get "/custdashboard" => "authentication#custdashboard"
+  get "/custchecklist" => "authentication#custchecklist"
+
+
+  #Engineer Dashboard & Checklist
+  get "/engdashboard" => "engineer#engdashboard"
+  get "/engchecklist" => "engineer#engchecklist"
+
+  #create project
+  post "/custdashboard" => "project#create"
+  
+
+
+
 
   #sign in Engineer
   # get '/signine', to: "authentication#signine"

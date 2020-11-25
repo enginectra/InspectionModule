@@ -9,7 +9,7 @@ class SessionsengineerController < ApplicationController
       if engineer && engineer.authenticate(login_params[:password])
         # encrypted version of the customer id is stored in the cookies 
         session[:engineer_id] = engineer.id           
-        redirect_to '/index'
+        redirect_to '/engdashboard'
       else
           flash[:login_errors] = ['invalid credentials']
           redirect_to '/signine'

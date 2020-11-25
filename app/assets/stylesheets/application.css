@@ -26,3 +26,8 @@
     margin-bottom: 10px;
     background-color: #A3B15A;
   }
+
+  mark {
+    background-color: rgb(194, 163, 230);
+    color: rgb(3, 5, 31);
+  }

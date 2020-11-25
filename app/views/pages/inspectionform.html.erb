@@ -1,90 +1,103 @@
+
 <div class = "float"> <h2 class = "center"> Inspection Module</h2></div>
 
 <div class = "container">
-<form>
+<form action = "/custdashboard" method= "POST">
+<input type="hidden" name= "authenticity_token" value="<%=form_authenticity_token %>">
     <div class = "float">
    <div class="form-row">
    <label for="inputEmail4">What Needs to be Inspected?</label>
    </div>
+   <!--
     <div class="form-group col-md-6">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <input class="form-check-input" type="checkbox" value="" id="firealarmcb">
   <label class="form-check-label" for="defaultCheck1">
     Fire Alarm
   </label>
     </div>
 
     <div class="form-group col-md-6">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <input class="form-check-input" type="checkbox" value="" id="heatsensorcb">
   <label class="form-check-label" for="defaultCheck1">
     Heat Sensor
   </label>
     </div>
     <div class="form-group col-md-6">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <input class="form-check-input" type="checkbox" value="" id="sprinklerscb">
   <label class="form-check-label" for="defaultCheck1">
     Sprinklers
   </label>
     </div>
      <div class="form-group col-md-6">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <input class="form-check-input" type="checkbox" value="" id="smokedetectorcb">
   <label class="form-check-label" for="defaultCheck1">
     Smoke Detector
   </label>
     </div>
+    -->
     
 <span class="label label-primary">Inspectee Company</span>
     <div class="form-group col-md-4">
       <label for="inputPassword4">Company Name</label>
-      <input type="text" class="form-control" id="inputPassword4">
+      <input type="text" class="form-control" id="nameIC" name = "project[Inspec_name]">
     </div>
   
   <div class="form-group">
     <label for="inputAddress">Company Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" class="form-control" id="addressIC" placeholder="1234 Main St" name = "project[Inspec_address]">
   </div>
 
   <span class="label label-primary">Electrical Services Company</span>
   <div class="form-group">
     <label for="inputAddress2">Company Name</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <input type="text" class="form-control" id="nameESC" placeholder="Apartment, studio, or floor" name = "project[Elect_name]">
   </div>
     <div class="form-group">
     <label for="inputAddress">Company Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" class="form-control" id="addressESC" placeholder="1234 Main St" name = "project[Elect_address]">
   </div>
     <div class="form-group">
     <label for="inputAddress">Company Email Address</label>
-    <input type="email" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="email" class="form-control" id="emailESC" placeholder="1234 Main St" name = "project[Elect_email]">
   </div>
 
    <span class="label label-primary">Fire Protection Services Company</span>
     <div class="form-group">
 
+        <div class="form-group">
+            <label for="inputName">Company Name</label>
+            <input type="text" class="form-control" id="nameFPC" placeholder="Example Compnay Ltd." name = "project[fp_name]">
+        </div>
+
          <div class="form-group">
             <label for="inputAddress">Representative's Name</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Full Name">
+            <input type="text" class="form-control" id="repnameFPC" placeholder="Full Name" name = "project[Fp_representative]">
         </div>
 
 
         <div class="form-group">
             <label for="inputAddress">Company Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="addressFPC" placeholder="1234 Main St" name = "project[fp_address]">
         </div>
         <div class="form-group">
             <label for="inputAddress">Company Email Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="emailFPC" placeholder="1234 Main St" name = "project[fp_email]">
         </div>
 
           <div class="form-group">
+    <label >What is the main work of the project?</label>
+        <input type="text" class="form-control" id="projectwork" placeholder="1234 Main St" name="project[Project_scope]">
+    </div>
+<!--
+          <div class="form-group">
             <label for="inputAddress">Job Number</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="jobnumberFPC" placeholder="1234 Main St">
         </div>
-
-
-
+        
         <div class="form-row">
             <label for=>Do you require a Scope Letter</label>
         </div>
+
         <div class="form-group col-md-4">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
@@ -103,22 +116,20 @@
     <div class = "float">
     <span class="label label-primary">Scope Letter</span>
 
-    <div class="form-group">
-    <label >What is the main work of the project?</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
+  #ProjectScopeEntry
     <div class="form-group">   
     <label for="inputAddress">What are the Individual Tasks of the Project (Provide up to 7 tasks)? </label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Task 1"><br>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Task 2"><br>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Task 3"><br>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Task 4"><br>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Task 5"><br>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Task 6"><br>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Task 7"><br>
+    <input type="text" class="form-control" id="task1" placeholder="Task 1"><br>
+    <input type="text" class="form-control" id="task2" placeholder="Task 2"><br>
+    <input type="text" class="form-control" id="task3" placeholder="Task 3"><br>
+    <input type="text" class="form-control" id="task4" placeholder="Task 4"><br>
+    <input type="text" class="form-control" id="task5" placeholder="Task 5"><br>
+    <input type="text" class="form-control" id="task6" placeholder="Task 6"><br>
+    <input type="text" class="form-control" id="task7" placeholder="Task 7"><br>
     </div>
-
-    <button class = "btn btn-primary" href = "" >Submit</button>
+-->
+    <input type="submit" name= "submit" class="btn btn-primary submit">
+    </div>
 </div>
 </div>
 

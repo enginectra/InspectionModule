@@ -8,7 +8,10 @@ class EngineerController < ApplicationController
     def signupe
     end
 
-  
+    def engdashboard
+    end
+    def engchecklist
+    end
 
     def index
     end

@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       if customer && customer.authenticate(login_params[:password])
         # encrypted version of the customer id is stored in the cookies 
         session[:customer_id] = customer.id           
-        redirect_to '/inspectionform'
+        redirect_to '/custdashboard'
       else
           flash[:login_errors] = ['invalid credentials']
           redirect_to '/signinc'

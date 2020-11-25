@@ -5,8 +5,13 @@ class AuthenticationController < ApplicationController
     # def singine
     # end
 
-    # def singupe
-    # end
+    def custdashboard
+    end
+
+    def custchecklist
+    end
+
+
 
   
 
